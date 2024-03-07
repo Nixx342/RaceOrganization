@@ -55,9 +55,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/about" />} />
           <Route path='/about' Component={About} />
-          {/* <Route path='/participants' Component={Participants} /> */}
-          <Route path='/participants' element={<Participants participants={data.participants} />} />
-          <Route path='/participants/:id' Component={ParticipantPage} />
+          <Route path='/participants/*' element={<Participants participants={data.participants} />} />
+          <Route path='/participants/:id' element={<ParticipantPage participants={data.participants} />} />
           <Route path='*' element={<NotFound />}/>
         </Routes>
       </div>
