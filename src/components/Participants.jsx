@@ -1,8 +1,15 @@
-function Participants () {
+function Participants ({participants}) {
 
     return (
         <div>
-            Participants
+            <h2>Участники</h2>
+            <ul>
+                {participants.map((participant, index) => (
+                <li key={index}>
+                    {participant.surname} {participant.name} {participant.middleName}
+                </li>
+                ))}
+            </ul>
         </div>
     )
 }

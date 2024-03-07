@@ -6,7 +6,43 @@ import Participants from './components/Participants';
 import ParticipantPage from './components/ParticipantPage';
 
 function App() {
-
+  let data = {
+    "participants": [
+      {
+        "surname": "Иванов",
+        "name": "Петр",
+        "middleName": "Иванович",
+        "city": "Пермь",
+        "birthday": "1990-01-01",
+        "email": "ivan@gmail.com",
+        "phone": "+79995553535",
+        "distance": 5,
+        "hasPayment": true
+      },
+      {
+        "surname": "Константинопольский",
+        "name": "Константин",
+        "middleName": "Константинович",
+        "city": "Александровск-Сахалинский",
+        "birthday": "1985-02-15",
+        "email": "konstantinopolskiy@gmail.com",
+        "phone": "+79123456789",
+        "distance": 10,
+        "hasPayment": true
+      },
+      {
+        "surname": "Чернова",
+        "name": "Анастасия",
+        "middleName": "Витальевна",
+        "city": "Санкт-Петербург",
+        "birthday": "1999-10-22",
+        "email": "nastya123@ya.ru",
+        "phone": "+79374657033",
+        "distance": 3,
+        "hasPayment": false
+      }
+    ]
+  }
   return (
     <Router>
       <header>
@@ -19,7 +55,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/about" />} />
           <Route path='/about' Component={About} />
-          <Route path='/participants' Component={Participants} />
+          {/* <Route path='/participants' Component={Participants} /> */}
+          <Route path='/participants' element={<Participants participants={data.participants} />} />
           <Route path='/participants/:id' Component={ParticipantPage} />
           <Route path='*' element={<NotFound />}/>
         </Routes>
