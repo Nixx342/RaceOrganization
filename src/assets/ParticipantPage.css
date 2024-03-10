@@ -1,0 +1,112 @@
+/* form {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    padding: auto;
+    background-color: rgb(59, 59, 59);
+    border-radius: 15px;
+    align-items: center;
+    padding: 10px;
+} */
+
+.btn-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-element {
+    width: 35vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; 
+  }
+  
+  .label-text {
+    flex: 1; 
+    text-align: left;
+  }
+   
+  .input-element {
+    flex: 1; 
+    margin-left: 10px; 
+  } 
+
+  input {
+    padding: 10px; /* добавляем внутренний отступ */
+    border: 1px solid #ccc; /* задаем границу */
+    border-radius: 5px; /* скругляем углы */
+    font-size: 16px; /* размер шрифта */
+    outline: none; /* убираем обводку при фокусе */
+}
+
+/* При наведении добавляем эффект тени */
+input:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* При фокусе увеличиваем тень */
+input:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+select {
+    padding: 10px; /* добавляем внутренний отступ */
+    border: 1px solid #ccc; /* задаем границу */
+    border-radius: 5px; /* скругляем углы */
+    font-size: 16px; /* размер шрифта */
+    appearance: none; /* убираем стандартное отображение стрелки */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* добавляем кастомную стрелку */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+}
+
+/* При наведении добавляем эффект тени */
+select:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* При фокусе увеличиваем тень */
+select:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Создаем стилизованный вид чекбокса */
+.checkbox-custom {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: #ffffff; /* Цвет заливки */
+    border: 2px solid #007bff; /* Цвет обводки */
+    border-radius: 4px; /* Скругляем углы */
+}
+
+/* Создаем стилизованный вид галочки */
+.checkbox-custom::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 3px;
+    width: 7px;
+    height: 14px;
+    border: solid #007bff; /* Цвет галочки */
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg); /* Поворачиваем галочку на 45 градусов */
+}
+
+/* Показываем галочку, когда чекбокс выбран */
+input[type="checkbox"]:checked + .checkbox-custom::after {
+    display: block;
+}
+
+/* Создаем стилизованный вид метки чекбокса */
+.checkbox-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px; /* Расстояние между текстом и кастомным чекбоксом */
+}

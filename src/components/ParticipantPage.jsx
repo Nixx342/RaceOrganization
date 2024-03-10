@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { useState } from 'react';
 import {Navigate} from 'react-router-dom'
 import InputMask from 'react-input-mask';
+import '../assets/ParticipantPage.css'
 
 function ParticipantPage ({ participants, removeParticipant, editParticipant }) {
 
@@ -79,21 +80,9 @@ function ParticipantPage ({ participants, removeParticipant, editParticipant }) 
           [name]: newValue
       }));
     };
-  
-
     const handleRedirect = () => {
       setRedirect(true)
     }
-    
-    // const handleChange = (e) => {
-    //   const { name, value, type, checked } = e.target;
-    //   const newValue = type === 'checkbox' ? checked : (name === 'distance')? Number(value): value; 
-    //   setParticipant(prevParticipant => ({
-    //       ...prevParticipant,
-    //       [name]: newValue
-    //   }));
-    // };
-
     const handleEdit = (e) => {
       setErrors({})
       e.preventDefault()
@@ -107,19 +96,11 @@ function ParticipantPage ({ participants, removeParticipant, editParticipant }) 
         setErrors(errors)
       }
     }
-
-    // const handleEdit = () => {
-    //     editParticipant(oldEmail, participant);
-    //     setRedirect(true)
-    // };
-
     const handleDelete = () => {
-        removeParticipant(participant.email);
-        setRedirect(true)
+      removeParticipant(participant.email);
+      setRedirect(true)
     }
-
-
-
+   
     if (redirect){
       return <Navigate  to='/participants' /> 
     }
@@ -134,70 +115,183 @@ function ParticipantPage ({ participants, removeParticipant, editParticipant }) 
             ))
           }
           <form>
-            <input 
-              name="surname"
-              value={participant.surname}
-              onChange={handleChange}
-            />
-            <input 
-              name="name"
-              value={participant.name}
-              onChange={handleChange}
-            />
-            <input 
-              name="middleName"
-              value={participant.middleName}
-              onChange={handleChange}
-            />
-            <input 
-              name="city"
-              value={participant.city}
-              onChange={handleChange}
-            />
-            <input 
-              name="birthday"
-              type='date' 
-              value={participant.birthday}
-              onChange={handleChange}
-            />
-            <input 
-              name="email"
-              value={participant.email}
-              onChange={handleChange}
-            />
-            {/* <input 
-              name="phone"
-              value={participant.phone}
-              onChange={handleChange}
-            /> */}
-            <InputMask 
-              mask="+7(999)999-99-99"
-              name='phone'
-              value={participant.phone}
-              onChange={handleChange}
-            />
-
-            <select name="distance" onChange={handleChange} value={participant.distance}>
-              <option value={3}>3 км</option>
-              <option value={5}>5 км</option>
-              <option value={10}>10 км</option>
-            </select>
-            <label>Взнос за участие 
+            <div className='form-element'>
+              <label className='label-text'>Фамилия:</label>  
               <input 
+                className='input-element'
+                name="surname"
+                value={participant.surname}
+                onChange={handleChange}
+              />
+            </div>
+            <div className='form-element'>
+              <label className='label-text'>Имя:</label> 
+              <input 
+                className='input-element'
+                name="name"
+                value={participant.name}
+                onChange={handleChange}
+              />
+            </div>
+            <div className='form-element'>
+              <label className='label-text'>Отчество:</label> 
+              <input 
+                className='input-element'
+                name="middleName"
+                value={participant.middleName}
+                onChange={handleChange}
+              />
+            </div>
+            <div className='form-element'>
+              <label className='label-text'>Город:</label> 
+              <input 
+                className='input-element'
+                name="city"
+                value={participant.city}
+                onChange={handleChange}
+              />
+            </div>
+            <div className='form-element'>
+              <label className='label-text'>Дата рождения:</label> 
+              <input 
+                className='input-element'
+                name="birthday"
+                type='date' 
+                value={participant.birthday}
+                onChange={handleChange}
+              />
+            </div>
+            <div className='form-element'>
+              <label className='label-text'>Электронная почта:</label>
+              <input 
+                className='input-element'
+                name="email"
+                value={participant.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className='form-element'>
+              <label className='label-text'>Телефон:</label> 
+              <InputMask 
+                className='input-element'
+                mask="+7(999)999-99-99"
+                name='phone'
+                value={participant.phone}
+                onChange={handleChange}
+              />
+            </div>
+            <div className='form-element'>
+              <label className='label-text'>Дистанция:</label> 
+              <select 
+                className='input-element'
+                name="distance" 
+                onChange={handleChange} 
+                value={participant.distance}
+              >
+                <option value={3}>3 км</option>
+                <option value={5}>5 км</option>
+                <option value={10}>10 км</option>
+              </select>
+            </div>
+            <div className='form-element'>
+              <label className='label-text'>Взнос за участие:</label>
+              <input 
+                className='checkbox-custom'
                 name="hasPayment"
                 type='checkbox' 
                 checked={participant.hasPayment}
                 onChange={handleChange}
               />
-            </label>
+            </div>
+            <div className='btn-group'>
+              <button onClick={handleEdit}>Сохранить</button>
+              <button onClick={handleDelete}>Удалить</button>
+              <button onClick={handleRedirect}>Закрыть</button>
+            </div>
+            
           </form>
-          <button onClick={handleEdit}>Сохранить</button>
-          <button onClick={handleDelete}>Удалить</button>
-          <button onClick={handleRedirect}>Закрыть</button>
+
+          {/* <form>
+            <label className='form-element'>
+              Фамилия:  
+              <input 
+                name="surname"
+                value={participant.surname}
+                onChange={handleChange}
+              />
+            </label>
+            <label className='form-element'>
+              Имя: 
+              <input 
+                name="name"
+                value={participant.name}
+                onChange={handleChange}
+              />
+            </label>
+            <label className='form-element'>
+              Отчество: 
+              <input 
+                name="middleName"
+                value={participant.middleName}
+                onChange={handleChange}
+              />
+            </label>
+            <label className='form-element'>
+              Город: 
+              <input 
+                name="city"
+                value={participant.city}
+                onChange={handleChange}
+              />
+            </label>
+            <label className='form-element'>
+              Дата рождения: 
+              <input 
+                name="birthday"
+                type='date' 
+                value={participant.birthday}
+                onChange={handleChange}
+              />
+            </label>
+            <label className='form-element'>
+              Электронная почта
+              <input 
+                name="email"
+                value={participant.email}
+                onChange={handleChange}
+              />
+            </label>
+            <label className='form-element'>
+              Телефон: 
+              <InputMask 
+                mask="+7(999)999-99-99"
+                name='phone'
+                value={participant.phone}
+                onChange={handleChange}
+              />
+            </label>
+            <label className='form-element'>
+              Дистанция: 
+              <select name="distance" onChange={handleChange} value={participant.distance}>
+                <option value={3}>3 км</option>
+                <option value={5}>5 км</option>
+                <option value={10}>10 км</option>
+              </select>
+            </label>
+            <label className='form-element'>
+              Взнос за участие 
+              <input 
+                  name="hasPayment"
+                  type='checkbox' 
+                  checked={participant.hasPayment}
+                  onChange={handleChange}
+              />
+            </label>
+          </form> */}
+          
         </div>
     );
 }
-
 
 ParticipantPage.propTypes = {
   participants: PropTypes.arrayOf(
