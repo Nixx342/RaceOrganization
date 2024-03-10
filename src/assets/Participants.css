@@ -1,0 +1,266 @@
+/* Мобильные устройства (360px - 767px) */
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  .modal-form {
+    width: 80vw; 
+    height: 60vh;
+    background-color: darkgray;
+  }
+  .participants {
+    width: 80vw;
+  }
+  .page-header {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 3vh;
+  }
+  .page-name {
+    width: 100%;
+    text-align: center;
+  }
+  .add-btn {
+    width: 100%;
+  }
+  .participant-row{
+    justify-content: center;
+    width: 90%;
+    display: block;
+    text-decoration: none;
+    color: #dbd9d9;
+  }
+  .participant-row :hover{
+    color: #707070;
+  }
+
+  .participant-person-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    margin-top: 2vh;
+    height: auto;
+    padding: 4%;
+  }
+  
+  .participant-full-name {
+    text-align: center;
+    font-weight:bolder;
+  }
+  .hasPayment {
+    display: none;
+  }
+  .other-info {
+    display: none;
+  }
+  .distance {
+    text-align: center;
+    font-weight: lighter;
+  }
+}
+/* Планшеты (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .modal-form {
+    width: 70vw; 
+    height: 65vh; 
+    background-color: darkgray;
+  }
+  .participants {
+    width: 60vw;
+  }
+  .page-header {
+    width: 100%;
+    text-align: right;
+    padding-bottom: 3vh;
+  }
+  .page-name {
+    width: 100%;
+    text-align: center;
+  }
+  .add-btn {
+    margin-right: 10%;
+  }
+  .participant-row{
+    justify-content: center;
+    width: 90%;
+    display: block;
+    /* padding: 10px; */
+    text-decoration: none;
+    color: #dbd9d9;
+    transition: background-color 0.3s ease;
+  }
+  .participant-row :hover{
+    color: #707070;
+  }
+
+  .participant-person-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-top: 2vh;
+    height: 15vh;
+  }
+  
+  .participant-full-name {
+    width: 40%;
+    text-align: left;
+  }
+  .hasPayment {
+    display: none;
+  }
+  .other-info {
+    width: 25%;
+    text-align: left;
+  }
+  .distance {
+    width: 10%;
+    text-align: right;
+  }
+}
+/* Десктопы и крупные планшеты (1024px - 1439px) */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .modal-form {
+    width: 65vw; 
+    height: 70vh;
+    background-color: darkgray;
+  }
+  .participants {
+    width: 60vw;
+  }
+  .page-header {
+    width: 100%;
+    text-align: right;
+    padding-bottom: 3vh;
+  }
+  .page-name {
+    width: 100%;
+    text-align: center;
+  }
+  .add-btn {
+    margin-right: 10%;
+  }
+  .participant-row{
+    justify-content: center;
+    width: 90%;
+    display: block;
+    /* padding: 10px; */
+    text-decoration: none;
+    color: #dbd9d9;
+    transition: background-color 0.3s ease;
+  }
+  .participant-row :hover{
+    color: #707070;
+  }
+
+  .participant-person-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-top: 2vh;
+  }
+  
+  .participant-full-name {
+    width: 40%;
+    text-align: left;
+  }
+  .other-info {
+    width: 25%;
+    text-align: left;
+  }
+  .distance {
+    width: 10%;
+    text-align: right;
+  }
+}
+/* Большие десктопы (1440px и выше) */
+@media screen and (min-width: 1440px) {
+    
+  .modal-form {
+    background-color: darkgray;
+    width: 50vw; 
+    padding: 4vh;
+    /* height: 50vh; */
+  }
+  .participants {
+    width: 60vw;
+  }
+  .page-header {
+    width: 100%;
+    text-align: right;
+    padding-bottom: 3vh;
+  }
+  .page-name {
+    width: 100%;
+    text-align: center;
+  }
+  .add-btn {
+    margin-right: 10%;
+  }
+  .participant-row{
+    justify-content: center;
+    width: 90%;
+    display: block;
+    text-decoration: none;
+    color: #dbd9d9;
+    transition: background-color 0.3s ease;
+  }
+  .participant-row :hover{
+    color: #707070;
+  }
+
+  .participant-person-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-top: 2vh;
+  }
+  
+  .participant-full-name {
+    width: 40%;
+    text-align: left;
+  }
+  .other-info {
+    width: 25%;
+    text-align: left;
+  }
+  .distance {
+    width: 10%;
+    text-align: right;
+  }
+}
+
+.error-area {
+    margin-bottom: 10px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    font-weight: 600;
+  }
+/* .error-area {
+    width: 100%;
+}
+.error {
+     margin: 2vh; 
+    width: 100%;
+    background-color: rgb(153, 47, 47);
+    color: white;
+} */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

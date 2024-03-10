@@ -4,45 +4,25 @@ import { BrowserRouter as Router, Navigate, Route, Routes, Link } from 'react-ro
 import NotFound from './components/NotFound';
 import Participants from './components/Participants';
 import ParticipantPage from './components/ParticipantPage';
+import { useDispatch, useSelector } from 'react-redux';
 
 function App() {
-  let data = {
-    "participants": [
-      {
-        "surname": "Иванов",
-        "name": "Петр",
-        "middleName": "Иванович",
-        "city": "Пермь",
-        "birthday": "1990-01-01",
-        "email": "ivan@gmail.com",
-        "phone": "+79995553535",
-        "distance": 5,
-        "hasPayment": true
-      },
-      {
-        "surname": "Константинопольский",
-        "name": "Константин",
-        "middleName": "Константинович",
-        "city": "Александровск-Сахалинский",
-        "birthday": "1985-02-15",
-        "email": "konstantinopolskiy@gmail.com",
-        "phone": "+79123456789",
-        "distance": 10,
-        "hasPayment": true
-      },
-      {
-        "surname": "Чернова",
-        "name": "Анастасия",
-        "middleName": "Витальевна",
-        "city": "Санкт-Петербург",
-        "birthday": "1999-10-22",
-        "email": "nastya123@ya.ru",
-        "phone": "+79374657033",
-        "distance": 3,
-        "hasPayment": false
-      }
-    ]
+
+  const participants = useSelector(state => state.participants)
+  const dispatch = useDispatch()
+
+  const addParticipant = (participant) => {
+    dispatch({ type: 'ADD_PARTICIPANT', payload: participant})
   }
+
+  const  removeParticipant = (email) => {
+    dispatch({type:'REMOVE_PARTICIPANT', payload: email})
+  }
+
+  const editParticipant = (email, participant) => {
+    dispatch({type:"EDIT_PARTICIPANT", payload: {email, participant} })
+  }
+
   return (
     <Router>
       <header>
@@ -54,9 +34,24 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Navigate to="/about" />} />
-          <Route path='/about' Component={About} />
-          <Route path='/participants/*' element={<Participants participants={data.participants} />} />
-          <Route path='/participants/:id' element={<ParticipantPage participants={data.participants} />} />
+          <Route path='/about' element={<About />} />
+          <Route 
+            path='/participants/*' 
+            element={<Participants 
+              participants={participants} 
+              addParticipant={addParticipant}
+              removeParticipant={removeParticipant}
+              editParticipant={editParticipant}
+            />} 
+          />
+          <Route 
+            path='/participants/:id' 
+            element={<ParticipantPage 
+              participants={participants} 
+              removeParticipant={removeParticipant}
+              editParticipant={editParticipant}
+            />} 
+          />
           <Route path='*' element={<NotFound />}/>
         </Routes>
       </div>
