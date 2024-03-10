@@ -1,112 +1,588 @@
-/* form {
-    display: flex;
-    flex-direction: column;
-    width: 40vw;
-    padding: auto;
-    background-color: rgb(59, 59, 59);
-    border-radius: 15px;
-    align-items: center;
-    padding: 10px;
-} */
-
-.btn-group {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.form-element {
-    width: 35vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px; 
+/* Мобильные устройства (360px - 767px) */
+@media screen and (min-width: 360px) and (max-width: 767px) {
+    .modal-form {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        background-color: rgb(59, 59, 59);
+        border-radius: 15px;
+        align-items: center;
+        padding: 5px;
+    }
+    .participants {
+        width: 80vw;
+    }
+    .page-header {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 3vh;
+    }
+    .page-name {
+        width: 100%;
+        text-align: center;
+    }
+    .add-btn {
+        width: 100%;
+    }
+    .participant-row{
+        justify-content: center;
+        width: 90%;
+        display: block;
+        text-decoration: none;
+        color: #dbd9d9;
+    }
+    .participant-row :hover{
+        color: #707070;
+    }
+    .participant-person-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #ccc;
+        margin-top: 2vh;
+        height: auto;
+        padding: 4%;
+    }
+    .participant-full-name {
+        text-align: center;
+        font-weight:bolder;
+    }
+    .hasPayment {
+        display: none;
+    }
+    .other-info {
+        display: none;
+    }
+    .distance {
+        text-align: center;
+        font-weight: lighter;
+    }
+    .btn-group {
+        margin: 20px;
+    }
+    .form-element {
+        width:90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .label-text {
+        flex: 1; 
+        text-align: left;
+    }
+    .input-element {
+        flex: 1; 
+        margin-left: 10px; 
+        width: 60%; 
+        } 
+    .input {
+        padding: 10px; 
+        border: 1px solid #ccc; 
+        border-radius: 5px; 
+        font-size: 16px;
+        outline: none; 
+        width: 100%;
+    }
+    .input:hover {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    .input:focus {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+    .select {
+        padding: 10px; 
+        border: 1px solid #ccc; 
+        border-radius: 5px; 
+        font-size: 16px; 
+        appearance: none; 
+        background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); 
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 20px;
+        width: 60%; 
+        }
+    .select:hover {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .select:focus {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .checkbox-custom {
+        position: relative;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        background-color: #ffffff; 
+        border: 2px solid #007bff; 
+        border-radius: 4px; 
+    }
+    .checkbox-custom::after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 7px;
+        top: 3px;
+        width: 7px;
+        height: 14px;
+        
+    }
+  }
+    /* Планшеты (768px - 1023px) */
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      width: 60vw;
+      padding: auto;
+      background-color: rgb(59, 59, 59);
+      border-radius: 15px;
+      align-items: center;
+      padding: 10px;
+    }
+    .participants {
+      width: 60vw;
+    }
+    .page-header {
+      width: 100%;
+      text-align: right;
+      padding-bottom: 3vh;
+    }
+    .page-name {
+      width: 100%;
+      text-align: center;
+    }
+    .add-btn {
+      margin-right: 10%;
+    }
+    .participant-row{
+      justify-content: center;
+      width: 90%;
+      display: block;
+      text-decoration: none;
+      color: #dbd9d9;
+      transition: background-color 0.3s ease;
+    }
+    .participant-row :hover{
+      color: #707070;
+    }
+  
+    .participant-person-info {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      margin-top: 2vh;
+      height: 15vh;
+    }
+    
+    .participant-full-name {
+      width: 40%;
+      text-align: left;
+    }
+    .hasPayment {
+      display: none;
+    }
+    .other-info {
+      width: 25%;
+      text-align: left;
+    }
+    .distance {
+      width: 10%;
+      text-align: right;
+    }
+    /*  */
+    .btn-group {
+      margin: 20px;
+    }
+    .form-element {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px; 
+    }
+    
+    .label-text {
+      flex: 1; 
+      text-align: left;
+    }
+     
+    .input-element {
+      flex: 1; 
+      margin-left: 10px; 
+    } 
+    
+    .input {
+      padding: 10px; 
+      border: 1px solid #ccc; 
+      border-radius: 5px; 
+      font-size: 16px;
+      outline: none; 
+    }
+    .input:hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    .input:focus {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+    .select {
+      padding: 10px; 
+      border: 1px solid #ccc; 
+      border-radius: 5px; 
+      font-size: 16px; 
+      appearance: none; 
+      background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); 
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 20px;
+    }
+    .select:hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .select:focus {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .checkbox-custom {
+      position: relative;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      background-color: #ffffff; 
+      border: 2px solid #007bff; 
+      border-radius: 4px; 
+    }
+    .checkbox-custom::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 7px;
+      top: 3px;
+      width: 7px;
+      height: 14px;
+      border: solid #007bff; 
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg); 
+    }
+    .input[type="checkbox"]:checked + .checkbox-custom::after {
+      display: block;
+    }
+    .checkbox-label {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 8px; 
+    }
+  }
+  /* Десктопы и крупные планшеты (1024px - 1439px) */
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      width: 50vw;
+      padding: auto;
+      background-color: rgb(59, 59, 59);
+      border-radius: 15px;
+      align-items: center;
+      padding: 10px;
+    }
+    .participants {
+      width: 60vw;
+    }
+    .page-header {
+      width: 100%;
+      text-align: right;
+      padding-bottom: 3vh;
+    }
+    .page-name {
+      width: 100%;
+      text-align: center;
+    }
+    .add-btn {
+      margin-right: 10%;
+    }
+    .participant-row{
+      justify-content: center;
+      width: 90%;
+      display: block;
+      text-decoration: none;
+      color: #dbd9d9;
+      transition: background-color 0.3s ease;
+    }
+    .participant-row :hover{
+      color: #707070;
+    }
+  
+    .participant-person-info {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      margin-top: 2vh;
+    }
+    
+    .participant-full-name {
+      width: 40%;
+      text-align: left;
+    }
+    .other-info {
+      width: 25%;
+      text-align: left;
+    }
+    .distance {
+      width: 10%;
+      text-align: right;
+    }
+    /*  */
+    .btn-group {
+      margin: 20px;
+    }
+    .form-element {
+      width: 35vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px; 
+    }
+    
+    .label-text {
+      flex: 1; 
+      text-align: left;
+    }
+     
+    .input-element {
+      flex: 1; 
+      margin-left: 10px; 
+    } 
+    
+    .input {
+      padding: 10px; 
+      border: 1px solid #ccc; 
+      border-radius: 5px; 
+      font-size: 16px;
+      outline: none; 
+    }
+    .input:hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    .input:focus {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+    .select {
+      padding: 10px; 
+      border: 1px solid #ccc; 
+      border-radius: 5px; 
+      font-size: 16px; 
+      appearance: none; 
+      background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); 
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 20px;
+    }
+    .select:hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .select:focus {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .checkbox-custom {
+      position: relative;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      background-color: #ffffff; 
+      border: 2px solid #007bff; 
+      border-radius: 4px; 
+    }
+    .checkbox-custom::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 7px;
+      top: 3px;
+      width: 7px;
+      height: 14px;
+      border: solid #007bff; 
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg); 
+    }
+    .input[type="checkbox"]:checked + .checkbox-custom::after {
+      display: block;
+    }
+    .checkbox-label {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 8px; 
+    }
+  }
+  /* Большие десктопы (1440px и выше) */
+  @media screen and (min-width: 1440px) {
+      
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      width: 40vw;
+      padding: auto;
+      background-color: rgb(59, 59, 59);
+      border-radius: 15px;
+      align-items: center;
+      padding: 10px;
+    }
+    .participants {
+      width: 60vw;
+    }
+    .page-header {
+      width: 100%;
+      text-align: right;
+      padding-bottom: 3vh;
+    }
+    .page-name {
+      width: 100%;
+      text-align: center;
+    }
+    .add-btn {
+      margin-right: 10%;
+    }
+    .participant-row{
+      justify-content: center;
+      width: 90%;
+      display: block;
+      text-decoration: none;
+      color: #dbd9d9;
+      transition: background-color 0.3s ease;
+    }
+    .participant-row :hover{
+      color: #707070;
+    }
+  
+    .participant-person-info {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      margin-top: 2vh;
+    }
+    
+    .participant-full-name {
+      width: 40%;
+      text-align: left;
+    }
+    .other-info {
+      width: 25%;
+      text-align: left;
+    }
+    .distance {
+      width: 10%;
+      text-align: right;
+    }
+    /*  */
+    .btn-group {
+      margin: 20px;
+    }
+    .form-element {
+      width: 35vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px; 
+    }
+    
+    .label-text {
+      flex: 1; 
+      text-align: left;
+    }
+     
+    .input-element {
+      flex: 1; 
+      margin-left: 10px; 
+    } 
+    
+    .input {
+      padding: 10px; 
+      border: 1px solid #ccc; 
+      border-radius: 5px; 
+      font-size: 16px;
+      outline: none; 
+    }
+    .input:hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    .input:focus {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+    .select {
+      padding: 10px; 
+      border: 1px solid #ccc; 
+      border-radius: 5px; 
+      font-size: 16px; 
+      appearance: none; 
+      background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); 
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 20px;
+    }
+    .select:hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .select:focus {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .checkbox-custom {
+      position: relative;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      background-color: #ffffff; 
+      border: 2px solid #007bff; 
+      border-radius: 4px; 
+    }
+    .checkbox-custom::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 7px;
+      top: 3px;
+      width: 7px;
+      height: 14px;
+      border: solid #007bff; 
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg); 
+    }
+    .input[type="checkbox"]:checked + .checkbox-custom::after {
+      display: block;
+    }
+    .checkbox-label {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 8px; 
+    }
   }
   
-  .label-text {
-    flex: 1; 
-    text-align: left;
+  .error-area {
+      margin-bottom: 10px;
   }
-   
-  .input-element {
-    flex: 1; 
-    margin-left: 10px; 
-  } 
-
-  input {
-    padding: 10px; /* добавляем внутренний отступ */
-    border: 1px solid #ccc; /* задаем границу */
-    border-radius: 5px; /* скругляем углы */
-    font-size: 16px; /* размер шрифта */
-    outline: none; /* убираем обводку при фокусе */
-}
-
-/* При наведении добавляем эффект тени */
-input:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-/* При фокусе увеличиваем тень */
-input:focus {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-}
-
-select {
-    padding: 10px; /* добавляем внутренний отступ */
-    border: 1px solid #ccc; /* задаем границу */
-    border-radius: 5px; /* скругляем углы */
-    font-size: 16px; /* размер шрифта */
-    appearance: none; /* убираем стандартное отображение стрелки */
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* добавляем кастомную стрелку */
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 20px;
-}
-
-/* При наведении добавляем эффект тени */
-select:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-/* При фокусе увеличиваем тень */
-select:focus {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Создаем стилизованный вид чекбокса */
-.checkbox-custom {
-    position: relative;
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    background-color: #ffffff; /* Цвет заливки */
-    border: 2px solid #007bff; /* Цвет обводки */
-    border-radius: 4px; /* Скругляем углы */
-}
-
-/* Создаем стилизованный вид галочки */
-.checkbox-custom::after {
-    content: "";
-    position: absolute;
-    display: none;
-    left: 7px;
-    top: 3px;
-    width: 7px;
-    height: 14px;
-    border: solid #007bff; /* Цвет галочки */
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg); /* Поворачиваем галочку на 45 градусов */
-}
-
-/* Показываем галочку, когда чекбокс выбран */
-input[type="checkbox"]:checked + .checkbox-custom::after {
-    display: block;
-}
-
-/* Создаем стилизованный вид метки чекбокса */
-.checkbox-label {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 8px; /* Расстояние между текстом и кастомным чекбоксом */
-}
+  .error {
+    color: rgb(255, 61, 61);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }

@@ -202,7 +202,7 @@ function Participants({ participants, addParticipant }) {
             <div className='form-element'>
               <label className='label-text'>Взнос за участие:</label>
               <input 
-                className='checkbox-custom'
+                className='input checkbox-custom'
                 name="hasPayment"
                 type='checkbox' 
                 onChange={handleChange}

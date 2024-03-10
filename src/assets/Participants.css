@@ -1,10 +1,9 @@
 /* Мобильные устройства (360px - 767px) */
-@media screen and (min-width: 360px) and (max-width: 767px) {
+/* @media screen and (min-width: 360px) and (max-width: 767px) {
   .modal-form {
     display: flex;
     flex-direction: column;
     width: 80vw;
-    /* padding: auto; */
     background-color: rgb(59, 59, 59);
     border-radius: 15px;
     align-items: center;
@@ -62,8 +61,224 @@
     text-align: center;
     font-weight: lighter;
   }
+  .btn-group {
+    margin: 20px;
+  }
+  .form-element {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; 
+  }
+  
+  .label-text {
+    flex: 1; 
+    text-align: left;
+  }
+   
+  .input-element {
+    flex: 1; 
+    margin-left: 10px; 
+  } 
+  
+  .input {
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px;
+    outline: none; 
+  }
+  .input:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .input:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  }
+  .select {
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    appearance: none; 
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); 
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+  }
+  .select:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .select:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .checkbox-custom {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: #ffffff; 
+    border: 2px solid #007bff; 
+    border-radius: 4px; 
+  }
+  .checkbox-custom::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 3px;
+    width: 7px;
+    height: 14px;
+    border: solid #007bff; 
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg); 
+  }
+  .input[type="checkbox"]:checked + .checkbox-custom::after {
+    display: block;
+  }
+  .checkbox-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px; 
+  }
+} */
+
+/* Мобильные устройства (360px - 767px) */
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  .modal-form {
+      display: flex;
+      flex-direction: column;
+      width: 80vw;
+      background-color: rgb(59, 59, 59);
+      border-radius: 15px;
+      align-items: center;
+      padding: 5px;
+  }
+  .participants {
+      width: 80vw;
+  }
+  .page-header {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 3vh;
+  }
+  .page-name {
+      width: 100%;
+      text-align: center;
+  }
+  .add-btn {
+      width: 100%;
+  }
+  .participant-row{
+      justify-content: center;
+      width: 90%;
+      display: block;
+      text-decoration: none;
+      color: #dbd9d9;
+  }
+  .participant-row :hover{
+      color: #707070;
+  }
+  .participant-person-info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ccc;
+      margin-top: 2vh;
+      height: auto;
+      padding: 4%;
+  }
+  .participant-full-name {
+      text-align: center;
+      font-weight:bolder;
+  }
+  .hasPayment {
+      display: none;
+  }
+  .other-info {
+      display: none;
+  }
+  .distance {
+      text-align: center;
+      font-weight: lighter;
+  }
+  .btn-group {
+      margin: 20px;
+  }
+  .form-element {
+      width:90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      
+  }
+  .label-text {
+      flex: 1; 
+      text-align: left;
+  }
+  .input-element {
+      flex: 1; 
+      margin-left: 10px; 
+      width: 60%; 
+      } 
+  .input {
+      padding: 10px; 
+      border: 1px solid #ccc; 
+      border-radius: 5px; 
+      font-size: 16px;
+      outline: none; 
+      width: 100%;
+  }
+  .input:hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .input:focus {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  }
+  .select {
+      padding: 10px; 
+      border: 1px solid #ccc; 
+      border-radius: 5px; 
+      font-size: 16px; 
+      appearance: none; 
+      background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); 
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 20px;
+      width: 60%; 
+      }
+  .select:hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .select:focus {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .checkbox-custom {
+      position: relative;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      background-color: #ffffff; 
+      border: 2px solid #007bff; 
+      border-radius: 4px; 
+  }
+  .checkbox-custom::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 7px;
+      top: 3px;
+      width: 7px;
+      height: 14px;
+      
+  }
 }
-/* Планшеты (768px - 1023px) */
+  /* Планшеты (768px - 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .modal-form {
     display: flex;
@@ -94,7 +309,6 @@
     justify-content: center;
     width: 90%;
     display: block;
-    /* padding: 10px; */
     text-decoration: none;
     color: #dbd9d9;
     transition: background-color 0.3s ease;
@@ -133,7 +347,7 @@
     margin: 20px;
   }
   .form-element {
-    width: 35vw;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -150,17 +364,17 @@
     margin-left: 10px; 
   } 
   
-  input {
+  .input {
     padding: 10px; 
     border: 1px solid #ccc; 
     border-radius: 5px; 
     font-size: 16px;
     outline: none; 
   }
-  input:hover {
+  .input:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
-  input:focus {
+  .input:focus {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   }
   .select {
@@ -174,10 +388,10 @@
     background-position: right 10px center;
     background-size: 20px;
   }
-  select:hover {
+  .select:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
-  select:focus {
+  .select:focus {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   .checkbox-custom {
@@ -202,7 +416,7 @@
     border-width: 0 2px 2px 0;
     transform: rotate(45deg); 
   }
-  input[type="checkbox"]:checked + .checkbox-custom::after {
+  .input[type="checkbox"]:checked + .checkbox-custom::after {
     display: block;
   }
   .checkbox-label {
@@ -242,7 +456,6 @@
     justify-content: center;
     width: 90%;
     display: block;
-    /* padding: 10px; */
     text-decoration: none;
     color: #dbd9d9;
     transition: background-color 0.3s ease;
@@ -294,20 +507,20 @@
     margin-left: 10px; 
   } 
   
-  input {
+  .input {
     padding: 10px; 
     border: 1px solid #ccc; 
     border-radius: 5px; 
     font-size: 16px;
     outline: none; 
   }
-  input:hover {
+  .input:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
-  input:focus {
+  .input:focus {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   }
-  select {
+  .select {
     padding: 10px; 
     border: 1px solid #ccc; 
     border-radius: 5px; 
@@ -318,10 +531,10 @@
     background-position: right 10px center;
     background-size: 20px;
   }
-  select:hover {
+  .select:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
-  select:focus {
+  .select:focus {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   .checkbox-custom {
@@ -346,7 +559,7 @@
     border-width: 0 2px 2px 0;
     transform: rotate(45deg); 
   }
-  input[type="checkbox"]:checked + .checkbox-custom::after {
+  .input[type="checkbox"]:checked + .checkbox-custom::after {
     display: block;
   }
   .checkbox-label {
@@ -438,20 +651,20 @@
     margin-left: 10px; 
   } 
   
-  input {
+  .input {
     padding: 10px; 
     border: 1px solid #ccc; 
     border-radius: 5px; 
     font-size: 16px;
     outline: none; 
   }
-  input:hover {
+  .input:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
-  input:focus {
+  .input:focus {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   }
-  select {
+  .select {
     padding: 10px; 
     border: 1px solid #ccc; 
     border-radius: 5px; 
@@ -462,10 +675,10 @@
     background-position: right 10px center;
     background-size: 20px;
   }
-  select:hover {
+  .select:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
-  select:focus {
+  .select:focus {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   .checkbox-custom {
@@ -490,7 +703,7 @@
     border-width: 0 2px 2px 0;
     transform: rotate(45deg); 
   }
-  input[type="checkbox"]:checked + .checkbox-custom::after {
+  .input[type="checkbox"]:checked + .checkbox-custom::after {
     display: block;
   }
   .checkbox-label {
@@ -502,13 +715,12 @@
 
 .error-area {
     margin-bottom: 10px;
-  }
-  
-  .error {
-    color: rgb(255, 61, 61);
-    font-size: 14px;
-    font-weight: 600;
-  }
+}
+.error {
+  color: rgb(255, 61, 61);
+  font-size: 14px;
+  font-weight: 600;
+}
 .modal {
     position: fixed;
     top: 0;
@@ -520,34 +732,3 @@
     justify-content: center;
     align-items: center;
 }
-/* .modal {
-    position: fixed;
-     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
-    
-    display: flex;
-    flex-direction: column;
-    padding: auto;
-    border-radius: 15px;
-    align-items: center;
-    padding: 10px;
-  } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -118,7 +118,7 @@ function ParticipantPage ({ participants, removeParticipant, editParticipant }) 
             <div className='form-element'>
               <label className='label-text'>Фамилия:</label>  
               <input 
-                className='input-element'
+                className='input'
                 name="surname"
                 value={participant.surname}
                 onChange={handleChange}
@@ -127,7 +127,7 @@ function ParticipantPage ({ participants, removeParticipant, editParticipant }) 
             <div className='form-element'>
               <label className='label-text'>Имя:</label> 
               <input 
-                className='input-element'
+                className='input'
                 name="name"
                 value={participant.name}
                 onChange={handleChange}
@@ -136,7 +136,7 @@ function ParticipantPage ({ participants, removeParticipant, editParticipant }) 
             <div className='form-element'>
               <label className='label-text'>Отчество:</label> 
               <input 
-                className='input-element'
+                className='input'
                 name="middleName"
                 value={participant.middleName}
                 onChange={handleChange}
@@ -145,7 +145,7 @@ function ParticipantPage ({ participants, removeParticipant, editParticipant }) 
             <div className='form-element'>
               <label className='label-text'>Город:</label> 
               <input 
-                className='input-element'
+                className='input'
                 name="city"
                 value={participant.city}
                 onChange={handleChange}
@@ -154,7 +154,7 @@ function ParticipantPage ({ participants, removeParticipant, editParticipant }) 
             <div className='form-element'>
               <label className='label-text'>Дата рождения:</label> 
               <input 
-                className='input-element'
+                className='input'
                 name="birthday"
                 type='date' 
                 value={participant.birthday}
@@ -164,7 +164,7 @@ function ParticipantPage ({ participants, removeParticipant, editParticipant }) 
             <div className='form-element'>
               <label className='label-text'>Электронная почта:</label>
               <input 
-                className='input-element'
+                className='input'
                 name="email"
                 value={participant.email}
                 onChange={handleChange}
@@ -173,7 +173,7 @@ function ParticipantPage ({ participants, removeParticipant, editParticipant }) 
             <div className='form-element'>
               <label className='label-text'>Телефон:</label> 
               <InputMask 
-                className='input-element'
+                className='input'
                 mask="+7(999)999-99-99"
                 name='phone'
                 value={participant.phone}
@@ -183,7 +183,7 @@ function ParticipantPage ({ participants, removeParticipant, editParticipant }) 
             <div className='form-element'>
               <label className='label-text'>Дистанция:</label> 
               <select 
-                className='input-element'
+                className='select'
                 name="distance" 
                 onChange={handleChange} 
                 value={participant.distance}
@@ -196,7 +196,7 @@ function ParticipantPage ({ participants, removeParticipant, editParticipant }) 
             <div className='form-element'>
               <label className='label-text'>Взнос за участие:</label>
               <input 
-                className='checkbox-custom'
+                className='input checkbox-custom'
                 name="hasPayment"
                 type='checkbox' 
                 checked={participant.hasPayment}
