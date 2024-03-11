@@ -1,23 +1,9 @@
 .about {
     width: 80vw;
-    justify-content: right;
+    justify-content: center;
 }
-.info {
-    display: flex;
-}
-.info-text {
-    width: 20vw;
+.info-text { 
+    width: 70%;
     text-align: left;
 }
-.photo {
-    width: 1px;
-    height: auto;
-}
-.maps {
-}
-.map {
-}
-.map-text {
-}
-.photo {
-}
+

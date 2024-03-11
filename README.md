@@ -1,8 +1,9 @@
-# React + Vite
+Запуск проекта:
+- Необходимо выполнить команду "npm install" в корневой директории проекта, чтобы установить все зависимости. 
+- После установки всех зависимостей запустите проект с помощью команды "npm run dev".
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Маршруты:
+    - /about : страница описания, основная страница попасть на которую можно по пути "/about" или "/" 
+    - /participant : сраница со списком участников
+    - /participant/index_записи_участника : страница с детально информации об участнике. При переходе на индекс который сушшествует будет открываться страница этого участника, есил ввести индекс которого нет, то откроется сообщение что страница не существует
+    - Любые другие адреса которые отличаются от выше описанных перенаправят на страницу с сообщением что страница не существует

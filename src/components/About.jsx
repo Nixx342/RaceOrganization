@@ -36,9 +36,13 @@ function About () {
                         ЗаБег — это для тебя!
                     </p>
                 </div>
-                <figure className='photo'>
-                    <img src={marafonImage} alt="Марафон" />
-                </figure>
+                <div className='photo'>
+                    {/* <figure className='photo'> */}
+                    <figure>
+                        <img src={marafonImage} alt="Марафон" />
+                    </figure>
+                </div>
+                
             </div>
            <div className='maps'>
                 <div className='map'>

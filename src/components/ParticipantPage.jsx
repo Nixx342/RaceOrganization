@@ -45,7 +45,7 @@ function ParticipantPage ({ participants, removeParticipant, editParticipant }) 
       }
     
       // Проверка корректности email
-      const emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]+$/;
+      const emailRegex = /^[a-zA-Z0-9.-]+@[a-zA-Z]+\.[a-zA-Z]+$/;
       if (formData.email && !emailRegex.test(formData.email)) {
         errors['email'] = 'Введите корректный email адрес';
       }
@@ -104,8 +104,8 @@ function ParticipantPage ({ participants, removeParticipant, editParticipant }) 
     if (redirect){
       return <Navigate  to='/participants' /> 
     }
-
-    return (
+    if(participants[id] !== undefined) {
+      return (
         <div>
           {
             Object.keys(errors).map(key => (
@@ -210,87 +210,12 @@ function ParticipantPage ({ participants, removeParticipant, editParticipant }) 
             </div>
             
           </form>
-
-          {/* <form>
-            <label className='form-element'>
-              Фамилия:  
-              <input 
-                name="surname"
-                value={participant.surname}
-                onChange={handleChange}
-              />
-            </label>
-            <label className='form-element'>
-              Имя: 
-              <input 
-                name="name"
-                value={participant.name}
-                onChange={handleChange}
-              />
-            </label>
-            <label className='form-element'>
-              Отчество: 
-              <input 
-                name="middleName"
-                value={participant.middleName}
-                onChange={handleChange}
-              />
-            </label>
-            <label className='form-element'>
-              Город: 
-              <input 
-                name="city"
-                value={participant.city}
-                onChange={handleChange}
-              />
-            </label>
-            <label className='form-element'>
-              Дата рождения: 
-              <input 
-                name="birthday"
-                type='date' 
-                value={participant.birthday}
-                onChange={handleChange}
-              />
-            </label>
-            <label className='form-element'>
-              Электронная почта
-              <input 
-                name="email"
-                value={participant.email}
-                onChange={handleChange}
-              />
-            </label>
-            <label className='form-element'>
-              Телефон: 
-              <InputMask 
-                mask="+7(999)999-99-99"
-                name='phone'
-                value={participant.phone}
-                onChange={handleChange}
-              />
-            </label>
-            <label className='form-element'>
-              Дистанция: 
-              <select name="distance" onChange={handleChange} value={participant.distance}>
-                <option value={3}>3 км</option>
-                <option value={5}>5 км</option>
-                <option value={10}>10 км</option>
-              </select>
-            </label>
-            <label className='form-element'>
-              Взнос за участие 
-              <input 
-                  name="hasPayment"
-                  type='checkbox' 
-                  checked={participant.hasPayment}
-                  onChange={handleChange}
-              />
-            </label>
-          </form> */}
-          
         </div>
     );
+    } else {
+      return <Navigate to='/404' />
+    }
+    
 }
 
 ParticipantPage.propTypes = {

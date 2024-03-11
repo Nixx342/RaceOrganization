@@ -61,6 +61,8 @@
     }
     .btn-group {
         margin: 20px;
+        display: flex;
+      justify-content: space-between;
     }
     .form-element {
         width:90%;
@@ -199,6 +201,8 @@
     /*  */
     .btn-group {
       margin: 20px;
+      display: flex;
+      justify-content: space-between;
     }
     .form-element {
       width: 90%;
@@ -342,6 +346,8 @@
     /*  */
     .btn-group {
       margin: 20px;
+      display: flex;
+      justify-content: space-between;
     }
     .form-element {
       width: 35vw;
@@ -486,6 +492,8 @@
     /*  */
     .btn-group {
       margin: 20px;
+      display: flex;
+      justify-content: space-between;
     }
     .form-element {
       width: 35vw;
