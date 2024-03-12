@@ -228,7 +228,7 @@ function ParticipantPage({ participants, removeParticipant, editParticipant }) {
       </div>
     );
   } else {
-    return <Navigate to="/404" />;
+    return <Navigate to="/e404" />;
   }
 }
 

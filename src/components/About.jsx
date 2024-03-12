@@ -36,32 +36,23 @@ function About () {
                         ЗаБег — это для тебя!
                     </p>
                 </div>
-                <div className='photo'>
-                    {/* <figure className='photo'> */}
-                    <figure>
-                        <img src={marafonImage} alt="Марафон" />
-                    </figure>
-                </div>
+                <figure>
+                    <img src={marafonImage} alt="Марафон" className='photo' />
+                </figure>
                 
             </div>
            <div className='maps'>
                 <div className='map'>
                     <h2>Маршрут - 3 км</h2>
-                    <figure className='photo'>
-                        <img src={map3km} alt="3km" />
-                    </figure>
+                    <img src={map3km} alt="3km" />
                 </div>
                 <div className='map'>
                     <h2>Маршрут - 5 км</h2>
-                    <figure className='photo'>
-                        <img src={map5km} alt="5km" />
-                    </figure>
+                    <img src={map5km} alt="5km" />
                 </div>
                 <div className='map'>
                     <h2>Маршрут - 10 км</h2>
-                    <figure className='photo'>
-                        <img src={map10km} alt="10km" />
-                    </figure>
+                    <img src={map10km} alt="10km" />
                 </div>
            </div>
         </div>
