@@ -1,10 +1,106 @@
 @media screen and (min-width: 360px) and (max-width: 767px) {
+  .map-img {
+    max-width: 90%;
+  }
+  .about {
+    width: 90vw;
+    justify-content: center;
+  }
+  .info {
+    display: grid;
+    justify-content: center;
+  }
+  .photo {
+    width: 80vw;
+    height: auto;
+    object-fit: cover;
+  }
+  .info-text {
+    width: 70vw;
+    margin: auto;
+    text-align: left;
+  }
+  .info-text h3 {
+    font-size: 24px;
+    margin: 0;
+    /* width: 120%; */
+  }
+  .info-text h5 {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  .photo-container {
+    /* width: 90%; */
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .about {
+    width: 80vw;
+    justify-content: center;
+  }
+  .info {
+    display: grid;
+    justify-content: center;
+  }
+  .photo {
+    width: 90vw;
+    height: auto;
+    object-fit: cover;
+  }
+  .info-text {
+    /* width: 70vw; */
+    margin: auto;
+    text-align: left;
+  }
+  .info-text h3 {
+    font-size: 24px;
+    margin: 0;
+    /* width: 120%; */
+  }
+  .info-text h5 {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  img {
+    max-width: 90%;
+  }
 }
-@media screen and (min-width: 1024px) and (max-width: 1439px) {
+@media screen and (min-width: 1024px) and (max-width: 1129px) {
+  .about {
+    width: 80vw;
+    justify-content: center;
+  }
+  .info {
+    display: grid;
+    justify-content: center;
+  }
+  .photo {
+    width: 70vw;
+    height: auto;
+    object-fit: cover;
+  }
+  .info-text {
+    width: 70vw;
+    margin: auto;
+    text-align: left;
+  }
+  .info-text h3 {
+    font-size: 24px;
+    margin: 0;
+    /* width: 120%; */
+  }
+  .info-text h5 {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  img {
+    max-width: 90%;
+  }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1130px) {
   .about {
     width: 80vw;
     max-width: 1500px;
@@ -12,7 +108,7 @@
   }
   .info {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .photo {
     width: 40vw;
@@ -33,13 +129,7 @@
     margin: 0;
     margin-bottom: 40px;
   }
+  img {
+    max-width: 90%;
+  }
 }
-
-/* .about {
-    width: 80vw;
-    justify-content: center;
-}
-.info-text { 
-    width: 70%;
-    text-align: left;
-} */
