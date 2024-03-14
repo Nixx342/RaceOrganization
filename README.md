@@ -10,9 +10,9 @@
 
 
 Не корректное отображение цветов может наблюдаться на :
-    Android - Яндекс Браузер и Google Chrome
-    MacOS - Google Chrome
+- Android - Яндекс Браузер и Google Chrome
+- MacOS - Google Chrome
 
 Корректное отображение цветов:
-    Windows - Яндекс браузер, Opera, Google Chrome
-    iOS - Яндекс браузер, Google Chrome, Safari
+- Windows - Яндекс браузер, Opera, Google Chrome
+- iOS - Яндекс браузер, Google Chrome, Safari
